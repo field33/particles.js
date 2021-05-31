@@ -552,6 +552,16 @@ var pJS = function (tag_id, params) {
   };
 
   pJS.fn.particlesUpdate = function () {
+    if (pJS.particles.number.max) {
+      if (pJS.particles.array.length > pJS.particles.number.max) {
+        var elementsToRemove =
+          pJS.particles.array.length - pJS.particles.number.max;
+        for (var i = 0; i < elementsToRemove; i++) {
+          let rmI = (Math.random() * pJS.particles.array.length) | 0;
+          pJS.particles.array.splice(rmI, 1);
+        }
+      }
+    }
     for (var i = 0; i < pJS.particles.array.length; i++) {
       /* the particle */
       var p = pJS.particles.array[i];
