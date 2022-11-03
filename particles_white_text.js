@@ -527,7 +527,7 @@ var pJS = function (tag_id, params) {
       var minFontSize = 10;
       fontSize = Math.max(minFontSize, 7 * Math.sqrt(radius));
       pJS.canvas.ctx.fillStyle = "#FFFFFF";
-      pJS.canvas.ctx.font = fontSize + "px Montserrat";
+      pJS.canvas.ctx.font = fontSize + "px Montserrat-custom";
       pJS.canvas.ctx.textBaseline = "middle";
       pJS.canvas.ctx.textAlign = "left";
       pJS.canvas.ctx.fillText(p.text, p.x + radius * 2, p.y);
